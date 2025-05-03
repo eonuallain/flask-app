@@ -5,12 +5,17 @@
 https://kind.sigs.k8s.io/docs/user/quick-start/
 ```
 [ $(uname -m) = x86_64 ] && curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.27.0/kind-linux-amd64
+chmod +x ./kind 
+sudo mv ./kind /usr/local/bin/
+kind version
+kind v0.27.0 go1.23.6 linux/amd64
 ```
 
 ## Kind - install (mac)
 
 ```
 brew install kind
+kind version
 ```
 
 ## Kind - create cluster
