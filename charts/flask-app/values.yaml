@@ -3,7 +3,7 @@ replicaCount: 1
 image:
   repository: docker.io/eonuallain/flask-app
   pullPolicy: IfNotPresent
-  tag: "v1"
+  tag: "v2"
 
 imagePullSecrets: []
 nameOverride: ""
@@ -17,9 +17,7 @@ serviceAccount:
 
 podAnnotations: {}
 podLabels: {}
-
 podSecurityContext: {}
-
 securityContext: {}
 
 service:
@@ -30,9 +28,8 @@ ingress:
   enabled: true
   className: "nginx"
   annotations: {}
-    kubernetes.io/ingress.class: nginx
   hosts:
-    - host: localhost
+    - host: ubuntu-t470
       paths:
         - path: /
           pathType: Prefix

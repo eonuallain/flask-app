@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: flask-app
-        image: eonuallain/flask-app:v1
+        image: eonuallain/flask-app:v2
         ports:
         - containerPort: 5000

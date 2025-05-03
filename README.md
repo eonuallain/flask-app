@@ -1,5 +1,10 @@
 # flask-app
 
+## "Fix" for ^M  
+```
+git config --global core.whitespace cr-at-eol
+```
+
 ## Run docker as non-root
 
 ```

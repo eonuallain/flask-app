@@ -5,7 +5,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: "localhost"
+  - host: "ubuntu-t470"
     http:
         paths:
         - path: /
