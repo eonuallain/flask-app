@@ -1,7 +1,19 @@
 # flask-app
-Flask Application
 
-Kind - create cluster
+## Kind - install (linux)
+
+https://kind.sigs.k8s.io/docs/user/quick-start/
+```
+[ $(uname -m) = x86_64 ] && curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.27.0/kind-linux-amd64
+```
+
+## Kind - install (mac)
+
+```
+brew install kind
+```
+
+## Kind - create cluster
 
 ```
 cat <<EOF | kind create cluster --config=-
@@ -19,7 +31,7 @@ nodes:
 EOF
 ```
 
-Ingress install with for kind
+## Ingress install with for kind
 
 ```
 https://kind.sigs.k8s.io/docs/user/ingress/
