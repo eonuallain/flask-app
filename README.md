@@ -1,5 +1,12 @@
 # flask-app
 
+## Run docker as non-root
+
+```
+sudo usermod -aG docker $USER
+newgrp docker
+```
+
 ## Kind - install (linux)
 
 https://kind.sigs.k8s.io/docs/user/quick-start/
