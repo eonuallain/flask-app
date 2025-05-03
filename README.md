@@ -45,8 +45,8 @@ EOF
 
 ## Ingress install with for kind
 
-```
 https://kind.sigs.k8s.io/docs/user/ingress/
 
+```
 kubectl apply -f https://kind.sigs.k8s.io/examples/ingress/deploy-ingress-nginx.yaml
 ```
