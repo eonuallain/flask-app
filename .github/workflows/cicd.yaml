@@ -44,6 +44,11 @@ jobs:
         run: |
           echo ${{needs.ci.outputs.commit_id}}
           pip install yq
-          cat charts/flask-app/values.yaml | grep -B 2 -A 2 tag
+          cat charts/flask-app/values.yaml | grep -B 1 -A 1 tag
           yq -Yi '.image.tag = "${{needs.ci.outputs.commit_id}}"' charts/flask-app/values.yaml
-          cat charts/flask-app/values.yaml | grep -B 2 -A 2 tag
+          cat charts/flask-app/values.yaml | grep -B 1 -A 1 tag
+
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: 'Updates values.yaml with commit ${{needs.ci.outputs.commit_id}}'
