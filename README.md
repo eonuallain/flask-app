@@ -62,3 +62,17 @@ From the `charts` directory run
 ```
 helm install flask-app -n flask .
 ```
+
+## delete flask-app with helm
+```
+helm uninstall flask-app -n flask
+```
+
+## install argocd with helm
+
+See https://github.com/argoproj/argo-helm/tree/main/charts/argo-cd
+
+```
+helm repo add argo https://argoproj.github.io/argo-helm
+helm repo ls
+```
