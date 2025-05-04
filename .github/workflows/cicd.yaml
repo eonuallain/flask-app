@@ -34,7 +34,7 @@ jobs:
 
   cd:
     needs: ci
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest 
     steps:
 
       - uses: actions/checkout@v4
@@ -44,4 +44,6 @@ jobs:
         run: |
           echo ${{needs.ci.outputs.commit_id}}
           pip install yq
+          cat charts/flask-app/values.yaml | grep -B 2 -A 2 tag
           yq -Yi '.image.tag = "${{needs.ci.outputs.commit_id}}"' charts/flask-app/values.yaml
+          cat charts/flask-app/values.yaml | grep -B 2 -A 2 tag
