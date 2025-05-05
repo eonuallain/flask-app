@@ -2,7 +2,7 @@ replicaCount: 1
 image:
   repository: docker.io/eonuallain/flask-app
   pullPolicy: IfNotPresent
-  tag: "c010bb"
+  tag: "0c833d"
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
